@@ -1,7 +1,7 @@
 <?php
 //get data from form
 if(isset($_POST['Submit'])){
-    $name = $_POST['fullname'];
+    $fullname = $_POST['fullname'];
     $to = $_POST['Email'];
     $PaymentThrough= $_POST['Payment Through'];
     $DonationMoney= $_POST['Donation Money'];
