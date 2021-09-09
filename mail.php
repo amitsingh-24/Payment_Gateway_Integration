@@ -1,3 +1,6 @@
+<html>
+<body>
+    
 <?php
 //get data from form
 if(isset($_POST['Submit'])){
@@ -16,3 +19,7 @@ if($email!=NULL){
 //redirect
 header("Location:thankyou.html");
 ?>
+    
+</body>
+</html>
+    
