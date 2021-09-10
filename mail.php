@@ -1,6 +1,4 @@
-<html>
-<body>
-    
+ 
 <?php
 //get data from form
 if(isset($_POST['Submit'])){
@@ -20,6 +18,4 @@ if($email!=NULL){
 header("Location:thankyou.html");
 ?>
     
-</body>
-</html>
     
