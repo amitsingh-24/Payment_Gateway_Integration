@@ -2,7 +2,7 @@
 <?php
 //get data from form
 $fullname = $_POST['fullname'];
-$to = $_POST['Email'];
+$email = $_POST['Email'];
 $PaymentThrough= $_POST['Payment Through'];
 $DonationMoney= $_POST['Donation Money'];
 $from = "noreply@amitsingh-24.github.io";
