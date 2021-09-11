@@ -5,12 +5,12 @@ if (isset($_POST['submit'])) {
   $message = "Thank you for Donating.";
   $fullname = $_POST['fullname'];
   $email = $_POST['Email'];
-  $PaymentThrough= $_POST['Payment Through'];
-  $DonationMoney= $_POST['Donation Money'];
+  $PaymentThrough= $_POST['PaymentThrough'];
+  $DonationMoney= $_POST['DonationMoney'];
  
 $to = "thisisamitsingh007@gmail.com";
 $subject = "Mail From Donation website";
-$txt ="Name: $fullname  \n  Email: = $Email  \n PaymentThrough: = $PaymentThrough  \n DonationMoney:  $DonationMoney ";
+$txt ="Name: $fullname  \n  Email: = $Email  \n Payment Through: = $PaymentThrough  \n Donation Money:  $DonationMoney ";
 //$headers = "From: noreply@amitsingh-24.github.io" . "\r\n" .;
 
 
@@ -18,7 +18,7 @@ mail($to,$subject,$txt);
 
 }
 //redirect
-header("Location:thankyou.html");
+//header("Location:thankyou.html");
 ?>
     
     
