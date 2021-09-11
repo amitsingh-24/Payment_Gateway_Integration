@@ -1,5 +1,6 @@
  
 <?php
+ob_start();
 //get data from form
 if (isset($_POST['submit'])) {
   $message = "Thank you for Donating.";
@@ -10,7 +11,7 @@ if (isset($_POST['submit'])) {
  
 $to = "thisisamitsingh007@gmail.com";
 $subject = "Mail From Donation website";
-$txt ="Name: $fullname  \n  Email: = $Email  \n Payment Through: = $PaymentThrough  \n Donation Money:  $DonationMoney ";
+$txt ="Name: $fullname  \n  Email: = $email  \n Payment Through: = $PaymentThrough  \n Donation Money:  $DonationMoney ";
 //$headers = "From: noreply@amitsingh-24.github.io" . "\r\n" .;
 
 
