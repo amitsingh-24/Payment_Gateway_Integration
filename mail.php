@@ -8,13 +8,13 @@ if (isset($_POST['submit'])) {
   $PaymentThrough= $_POST['Payment Through'];
   $DonationMoney= $_POST['Donation Money'];
  
-$from = "noreply@amitsingh-24.github.io";
+$to = "thisisamitsingh007@gmail.com";
 $subject = "Mail From Donation website";
 $txt ="Name: $fullname  \n  Email: = $Email  \n PaymentThrough: = $PaymentThrough  \n DonationMoney:  $DonationMoney ";
-$headers = "From: noreply@amitsingh-24.github.io" . "\r\n" .;
+//$headers = "From: noreply@amitsingh-24.github.io" . "\r\n" .;
 
 
-mail($from,$subject,$txt,$headers);
+mail($to,$subject,$txt);
 
 }
 //redirect
