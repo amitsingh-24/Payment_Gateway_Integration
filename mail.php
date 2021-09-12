@@ -1,33 +1,25 @@
- 
-<?php
-ob_start();
-//get data from form
-if (isset($_POST['submit'])){
- $subject = $_POST['Mail From Donation website'];
- $message = $_POST['Thank you for Donating.'];
- $fullname = $_POST['fullname'];
- $email = $_POST['Email'];
- $PaymentThrough= $_POST['PaymentThrough'];
- $DonationMoney= $_POST['DonationMoney'];
- $headers = 'From: thisisamitsingh007@gmail.com'. $email . "rn"; // Sender's Email
- $headers .= 'Cc: thisisamitsingh007@gmail.com'. $email . "rn"; // Carbon copy to Sender
- 
- 
- mail("thisisamitsingh007@gmail.com", $subject, $message, $fullname, $email, $Paymentthrough, $DonationMoney, $headers);
- 
- 
-} 
- 
-//$to = "thisisamitsingh007@gmail.com";
-//$subject = "Mail From Donation website";
-//$txt ="Name: $fullname  \n  Email: $email  \n Payment Through:  $PaymentThrough  \n Donation Money:  $DonationMoney ";
-//$headers = "From: noreply@amitsingh-24.github.io" . "\r\n" .;
-
-//mail($to,$subject,$txt);
+  <?php 
+  if(isset($_POST['submit'])){
+      $to = "thisisamitsingh007@gmail.com"; // this is your Email address
+      $from = $_POST['email']; // this is the sender's Email address
+      $fullname = $_POST['fullname'];
+      $PaymentThrough= $_POST['PaymentThrough'];
+      $DonationMoney= $_POST['DonationMoney'];
+      $subject = "Donation Money";
+      $subject2 = "Copy of your Donation Receipt";
+      $message = $fullname . " " . "\n\n" . $PaymentThrough .  "\n\n" .  $DonationMoney . "\n\n" .  $_POST['message'];
+      $message2 = "Here is a copy of your message " .  $fullname . " " . "\n\n" . $PaymentThrough .  "\n\n" .  $DonationMoney . "\n\n" . $_POST['message'];
+  
+      $headers = "From:" . $from;
+      $headers2 = "From:" . $to;
+      mail($to,$subject,$message,$headers);
+      mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+      echo "Mail Sent. Thank you " . $fullnmae . ",Thanks for Donating.";.
+      }
+  ?>
 
 
 //redirect
 //header("Location:thankyou.html");
-?>
     
     
