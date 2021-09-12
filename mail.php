@@ -3,8 +3,8 @@
 ob_start();
 //get data from form
 if (isset($_POST['submit'])){
- $subject = "Mail From Donation website";
- $message = "Thank you for Donating.";
+ $subject = $_POST['Mail From Donation website'];
+ $message = $_POST['Thank you for Donating.'];
  $fullname = $_POST['fullname'];
  $email = $_POST['Email'];
  $PaymentThrough= $_POST['PaymentThrough'];
