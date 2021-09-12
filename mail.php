@@ -9,8 +9,8 @@ if (isset($_POST['submit'])){
  $email = $_POST['Email'];
  $PaymentThrough= $_POST['PaymentThrough'];
  $DonationMoney= $_POST['DonationMoney'];
- $headers = 'From:'. $email2 . "rn"; // Sender's Email
- $headers .= 'Cc:'. $email2 . "rn"; // Carbon copy to Sender
+ $headers = 'From: thisisamitsingh007@gmail.com'. $email . "rn"; // Sender's Email
+ $headers .= 'Cc: thisisamitsingh007@gmail.com'. $email . "rn"; // Carbon copy to Sender
  
  
  mail("thisisamitsingh007@gmail.com", $subject, $message, $fullname, $email, $Paymentthrough, $DonationMoney, $headers);
