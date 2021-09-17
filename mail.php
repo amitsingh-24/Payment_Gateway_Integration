@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
   
 
 
-$to = "myemail@outlook.com";
+$to = "thisisamitsingh007@gmail.com";
 $subject = "Registration Submission";
 $body = " Donater Name/Name's: $name \n Donater E-mail: $email \n \n";
 
