@@ -3,7 +3,7 @@ ob_start(); //output buffering because I like it.
 
 if (isset($_POST['submit'])) {
   // Process the form
-  $message = "Thank you for Donating! Thanks for Donating";
+  $message = "Thank you for Donating!";
   $fullname = $_POST['fullname'];
   $email = $_POST['email'];
   $PaymentThrough = $_POST['PaymentThrough'];
