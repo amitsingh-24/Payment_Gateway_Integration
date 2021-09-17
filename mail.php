@@ -1,21 +1,24 @@
-<?php 
-if(isset($_POST['submit'])){
-  $to = "thisisamitsingh007@gmail.com"; // this is your Email address
-  $from = $_POST['email']; // this is the sender's Email address
+<?php
+ob_start(); //output buffering because I like it.
+
+if (isset($_POST['submit'])) {
+  // Process the form
+  $message = "Thank you for registering! We will respond to your request shortly";
   $fullname = $_POST['fullname'];
-  $PaymentThrough= $_POST['PaymentThrough'];
-  $DonationMoney= $_POST['DonationMoney'];
-  $subject = "Donation Money";
-  $subject2 = "Copy of your Donation Receipt";
-  $message = $fullname . " " . "\n\n" . $PaymentThrough .  "\n\n" .  $DonationMoney . "\n\n" .  $_POST['message'];
-  $message2 = "Here is a copy of your message " .  $fullname . " " . "\n\n" . $PaymentThrough .  "\n\n" .  $DonationMoney . "\n\n" . $_POST['message'];
+  $email = $_POST['email'];
+  $PaymentThrough = $_POST['PaymentThrough'];
+  $DonationMoney = $_POST['DonationMoney'];
   
-  $headers = "From:" . $from;
-  $headers2 = "From:" . $to;
-  mail($to,$subject,$message,$headers);
-  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-  echo "Mail Sent. Thank you " . $fullname . ",Thanks for Donating.";.
-  }
+
+
+$to = "myemail@outlook.com";
+$subject = "Registration Submission";
+$body = " Donater Name/Name's: $name \n Donater E-mail: $email \n \n";
+
+mail($to,$subject,$body);
+
+}
+
 ?>
 
 
