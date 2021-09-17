@@ -1,23 +1,23 @@
 <?php
-ob_start(); //output buffering because I like it.
+ 
 
-if (isset($_POST['submit'])) {
-  // Process the form
-  $message = "Thank you for Donating!";
-  $fullname = $_POST['fullname'];
-  $email = $_POST['email'];
-  $PaymentThrough = $_POST['PaymentThrough'];
-  $DonationMoney = $_POST['DonationMoney'];
+  // Replace contact@example.com with your real receiving email address
+  $receiving_email_address = 'thisisamitsingh007@gmail.com';
 
-$to = "thisisamitsingh007@gmail.com";
-$subject = "Donation Reciept";
-$body = " Donater Name/Name's: $fullname \n Donater E-mail: $email \n \n";
+  
+  $contact->to = $receiving_email_address;
+  $contact->fullname = $_POST['fullname'];
+  $contact->email = $_POST['email'];
+  $contact->PaymentThrough = $_POST['PaymentThrough'];
+  $contact->DonationMoney = $_POST['DonationMoney'];
 
-mail($to,$subject,$body);
+  $contact->add_message( $_POST['fullname'], 'From');
+  $contact->add_message( $_POST['email'], 'Email');
+  $contact->add_message( $_POST['PaymentThrough'], 'PaymentThrough' );
+  $contact->add_message( $_POST['DonationMoney'], 'DonationMoney');
 
-}
+  echo $contact->send();
 ?>
-
 
 //redirect
 //header("Location:thankyou.html");
