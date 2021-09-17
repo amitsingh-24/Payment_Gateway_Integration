@@ -3,7 +3,7 @@ ob_start(); //output buffering because I like it.
 
 if (isset($_POST['submit'])) {
   // Process the form
-  $message = "Thank you for registering! We will respond to your request shortly";
+  $message = "Thank you for Donating! We will respond to your request shortly";
   $fullname = $_POST['fullname'];
   $email = $_POST['email'];
   $PaymentThrough = $_POST['PaymentThrough'];
@@ -12,8 +12,8 @@ if (isset($_POST['submit'])) {
 
 
 $to = "thisisamitsingh007@gmail.com";
-$subject = "Registration Submission";
-$body = " Donater Name/Name's: $name \n Donater E-mail: $email \n \n";
+$subject = "Donation Reciept";
+$body = " Donater Name/Name's: $fullname \n Donater E-mail: $email \n \n";
 
 mail($to,$subject,$body);
 
